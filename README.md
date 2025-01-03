@@ -1,4 +1,4 @@
-# CoinBase
+# BigiCoin
 CoinBase : A platform for checking crypto currency price.
 
 you can use bigicoin for checking BTC , ETH , .....price and see charts.
