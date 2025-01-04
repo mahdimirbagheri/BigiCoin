@@ -25,7 +25,7 @@ namespace CoinBase.Data
 
         public ICommand RemoveCoin => new DelegateCommand(o =>
         {
-            MessageBox.Show("Успешно!");
+            MessageBox.Show("Finished!");
             new PortfolioModel().RemoveCoin(Transaction.Name);
         });
     }

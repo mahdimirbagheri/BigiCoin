@@ -174,10 +174,6 @@ namespace CoinBase.Model
             client.Headers.Add("Accepts", "application/json");
             return client.DownloadString(URL.ToString());
         }
-        /// <summary>
-        /// Удаление элемента из базы данных через имя элемента.
-        /// </summary>
-        /// <param name="entity"></param>
         public void RemoveCoin(string name)
         {
             using (var context = new MyDbContext())

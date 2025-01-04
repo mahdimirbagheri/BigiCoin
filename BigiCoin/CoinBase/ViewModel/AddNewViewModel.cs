@@ -147,8 +147,8 @@ namespace CoinBase.ViewModel
         {
             var model = new AddNewModel();
 
-            Quantity = Quantity.Replace(".",",");
-            PricePerCoin = PricePerCoin.Replace(".",",");
+            Quantity = Quantity.Replace(".", ",");
+            PricePerCoin = PricePerCoin.Replace(".", ",");
 
             if (SelectedCalandarDate == DateTime.MinValue) SelectedCalandarDate = DateTime.Now;
 
@@ -156,21 +156,21 @@ namespace CoinBase.ViewModel
             {
                 if (quantity > 0 && pricePerCoin > 0)
                 {
-                    model.AddNew(SelectedItem.id,quantity, SelectedItem.name, SelectedCalandarDate, SelectedItem.symbol, pricePerCoin, 0, Note);
+                    model.AddNew(SelectedItem.id, quantity, SelectedItem.name, SelectedCalandarDate, SelectedItem.symbol, pricePerCoin, 0, Note);
                     Note = string.Empty;
                     Close();
                 }
-                else MessageBox.Show("Цена монеты и количество не могут быть меньше или равно нулю.");
+                else MessageBox.Show("Coin price and quantity cannot be less than or equal to zero.");
             }
-            else MessageBox.Show("Упс, что-то пошло не так. Проверьте введенные данные.");
+            else MessageBox.Show("Oops, something went wrong. Check your input.");
         });
         public ICommand AddNoteCommand => new DelegateCommand(o =>
         {
-            MessageBox.Show("Значение сохранено.");
+            MessageBox.Show("Value saved.");
         });
         public ICommand AddCalandarDateCommand => new DelegateCommand(o =>
         {
-            MessageBox.Show("Значение сохранено.");
+            MessageBox.Show("Value saved.");
         });
         private void Close()
         {
